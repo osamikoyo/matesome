@@ -45,3 +45,16 @@ func Auth(c echo.Context) error {
 
 	return c.JSON(http.StatusOK, u)
 }
+
+func Register(c echo.Context) error {
+	loger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	var u models.User
+
+	if err := c.Bind(&u); err != nil {
+		loger.Error(err.Error())
+		return err
+	}
+
+	db := db.New()
+	return db.Register_User(u)
+}
