@@ -9,7 +9,8 @@ export default {
         primaryForeground: "#FAFAFA",
         darkerBackground: "#08080A",
         grayForeground: "#a1a1aa",
-        someGrayBackground: "#18181B"
+        someGrayBackground: "#18181B",
+        someGray: "#535354"
       },
     },
   },
